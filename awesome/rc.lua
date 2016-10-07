@@ -1,5 +1,6 @@
 --Michael McMahon
 --Awesome config to remove window border.  This is useful to make any program under GNU/Linux fullscreen.
+--This config may be located in /etc/xdg/awesome/rc.lua
 
 -- Standard awesome library
 require("awful")
