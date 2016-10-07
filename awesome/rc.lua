@@ -1,3 +1,6 @@
+--Michael McMahon
+--Awesome config to remove window border.  This is useful to make any program under GNU/Linux fullscreen.
+
 -- Standard awesome library
 require("awful")
 require("awful.autofocus")
