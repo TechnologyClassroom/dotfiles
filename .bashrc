@@ -3,11 +3,33 @@
 # This goes in your ~/.bashrc file.  After making a change, run ¨exec bash¨ to test results.
 
 # dirtree is based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
+# extract is based on graysky from https://bbs.archlinux.org/viewtopic.php?id=110601
 
 alias feh='feh -FZ'
 alias search='find / 2>/dev/null | grep -i $1'
 alias searchhere='find . 2>/dev/null | grep -i $1'
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
+
+extract () {
+   if [ -f $1 ] ; then
+       case $1 in
+           *.tar.bz2)   tar xvjf $1 && cd $(echo $1 | sed 's/.tar.bz2//')    ;;
+           *.tar.gz)    tar xvzf $1 && cd $(echo $1 | sed 's/.tar.gz//')    ;;
+           *.bz2)       bunzip2 $1 && cd $(echo $1 | sed 's/.bz2//')    ;;
+           *.rar)       unrar x $1 && cd $(echo $1 | sed 's/.rar//')    ;;
+           *.gz)        gunzip $1 && cd $(echo $1 | sed 's/.gz//')    ;;
+           *.tar)       tar xvf $1 && cd $(echo $1 | sed 's/.tar//')    ;;
+           *.tbz2)      tar xvjf $1 && cd $(echo $1 | sed 's/.tbz2//')    ;;
+           *.tgz)       tar xvzf $1 && cd $(echo $1 | sed 's/.tgz//')    ;;
+           *.zip)       unzip $1 && cd $(echo $1 | sed 's/.zip//')    ;;
+           *.Z)         uncompress $1 && cd $(echo $1 | sed 's/.Z//')    ;;
+           *.7z)        7z x $1 && cd $(echo $1 | sed 's/.7z//')    ;;
+           *)           echo "don't know how to extract '$1'..." ;;
+       esac
+   else
+       echo "'$1' is not a valid file!"
+   fi
+ }
 
 # This can easily become too much.  Especially if you use tmux or screen.  Pick one or two.
 
