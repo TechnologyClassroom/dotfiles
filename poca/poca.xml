@@ -49,6 +49,11 @@
         </subscription>
 
         <subscription>
+            <title>crypto-gram</title>
+            <url>http://dhenage.libsyn.com/rss</url>
+        </subscription>
+
+        <subscription>
             <title>devrandom</title>
             <url>http://devrandomshow.org/shows/?f=rss.xml</url>
         </subscription>
@@ -111,16 +116,6 @@
         <subscription>
             <title>runasradio</title>
             <url>http://www.pwop.com/feed.aspx?show=runasradio</url>
-        </subscription>
-
-        <subscription>
-            <title>securitynow</title>
-            <url>http://leoville.tv/podcasts/sn.xml</url>
-        </subscription>
-
-        <subscription>
-            <title>semi-coherent</title>
-            <url>http://www.theregister.co.uk/hardware/semi_coherent/podcast.rss</url>
         </subscription>
 
         <subscription>
