@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<poca version="0.6">
+
+    <!-- Please see detailed configuration documentation online:
+     https://github.com/brokkr/poca/wiki/Configuration -->
+
+    <settings>
+
+        <!-- The meaning of the settings options are briefly as follows:
+        * base_dir: directory containing the individual subscription folders
+        * id3encoding: encoding to use on metadata (utf8 or latin1)
+        * id3removev1: should we remove id3v1, only keeping v2 (yes or no)
+        * useragent: _fallback_ user agent if connection is rejected for
+          default python user agent. Leave empty not to use a fallback.
+        -->
+
+        <base_dir>/media/sdb1/data/audio/podcasts</base_dir>
+        <id3encoding>utf8</id3encoding>
+        <id3removev1>yes</id3removev1>
+        <useragent></useragent>
+
+    </settings>
+
+    <subscriptions>
+
+        <!-- The meaning of the subscription options are brifly as follows:
+        * title: Name used for the folder of the subscription (required)
+        * url: The address of the rss feed (required)
+        * max_number: Max number of files to keep in subscription (optional)
+        * from_the_top: Get oldest files first, not newest (optional)
+        * metadata: Override id3 header fields with these values
+          (see https://github.com/brokkr/poca/wiki/ID3-frames for details)
+        * filters: Contains one or more of following tags (all optional)
+          * filename: Filename of the entry must match this string/regex
+          * title: Same as above, only for the title in the rss 
+          * hour: The hour (24h-format) at which the entry was published.
+          * weekday: Only entries from one of these weekdays (as integers)
+          * after_date: Only use entries published after date specified.
+        -->
+
+        <subscription>
+            <title>adventurezone</title>
+            <url>http://feeds.feedburner.com/43FPodcast</url>
+        </subscription>
+
+        <subscription>
+            <title>adventurezone</title>
+            <url>http://adventurezone.libsyn.com/rss</url>
+        </subscription>
+
+        <subscription>
+            <title>devrandom</title>
+            <url>http://devrandomshow.org/shows/?f=rss.xml</url>
+        </subscription>
+
+        <subscription>
+            <title>feathercast-apache</title>
+            <url>http://feathercast.apache.org/feed/podcast/</url>
+        </subscription>
+
+        <subscription>
+            <title>gnuworldorder-ogg</title>
+            <url>http://gnuworldorder.info/ogg.xml</url>
+        </subscription>
+
+        <subscription>
+            <title>gnuworldorder-spx</title>
+            <url>http://gnuworldorder.info/spx.xml</url>
+        </subscription>
+
+        <subscription>
+            <title>goinglinux</title>
+            <url>http://goinglinux.com/oggpodcast.xml</url>
+        </subscription>
+
+        <subscription>
+            <title>guardian</title>
+            <url>https://www.theguardian.com/technology/series/chips-with-everything/podcast.xml</url>
+        </subscription>
+
+        <subscription>
+            <title>hpr-ogg</title>
+            <url>http://hackerpublicradio.org/hpr_total_ogg_rss.php</url>
+        </subscription>
+
+        <subscription>
+            <title>hpr-spx</title>
+            <url>http://hackerpublicradio.org/hpr_total_spx_rss.php</url>
+        </subscription>
+
+        <subscription>
+            <title>kernelpanic</title>
+            <url>http://kernelpanicoggcast.net/rss.php</url>
+        </subscription>
+
+        <subscription>
+            <title>linuxluddites</title>
+            <url>http://feeds.feedburner.com/LinuxLudditesOgg</url>
+        </subscription>
+
+        <subscription>
+            <title>linuxlugcast</title>
+            <url>http://feeds.feedburner.com/linuxlugcast/JZUx</url>
+        </subscription>
+
+        <subscription>
+            <title>puppet</title>
+            <url>https://puppet.com/podcast_feed</url>
+        </subscription>
+
+        <subscription>
+            <title>runasradio</title>
+            <url>http://www.pwop.com/feed.aspx?show=runasradio</url>
+        </subscription>
+
+        <subscription>
+            <title>securitynow</title>
+            <url>http://leoville.tv/podcasts/sn.xml</url>
+        </subscription>
+
+        <subscription>
+            <title>semi-coherent</title>
+            <url>http://www.theregister.co.uk/hardware/semi_coherent/podcast.rss</url>
+        </subscription>
+
+        <subscription>
+            <title>softwareengineeringradio</title>
+            <url>http://feeds.feedburner.com/se-radio</url>
+        </subscription>
+
+        <subscription>
+            <title>thecommandline</title>
+            <url>https://thecommandline.net/cmdln_free</url>
+        </subscription>
+
+        <subscription>
+            <title>welcometonightvale</title>
+            <url>http://nightvale.libsyn.com/rss</url>
+        </subscription>
+
+    </subscriptions>
+
+</poca>
