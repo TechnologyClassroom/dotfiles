@@ -119,11 +119,6 @@
         </subscription>
 
         <subscription>
-            <title>softwareengineeringradio</title>
-            <url>http://feeds.feedburner.com/se-radio</url>
-        </subscription>
-
-        <subscription>
             <title>thecommandline</title>
             <url>https://thecommandline.net/cmdln_free</url>
         </subscription>
