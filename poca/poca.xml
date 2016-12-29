@@ -79,11 +79,6 @@
         </subscription>
 
         <subscription>
-            <title>guardian</title>
-            <url>https://www.theguardian.com/technology/series/chips-with-everything/podcast.xml</url>
-        </subscription>
-
-        <subscription>
             <title>hpr-ogg</title>
             <url>http://hackerpublicradio.org/hpr_total_ogg_rss.php</url>
         </subscription>
