@@ -5,10 +5,16 @@
 # dirtree is based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
 # extract is based on graysky from https://bbs.archlinux.org/viewtopic.php?id=110601
 
-alias feh='feh -FZ'
 alias search='find / 2>/dev/null | grep -i $1'
 alias searchhere='find . 2>/dev/null | grep -i $1'
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
+alias editcron='sudo crontab -e'
+
+# Custom program preferences
+alias feh='feh -FZ'
+alias etcher='sudo /home/user/builds/Etcher-linux-x64.AppImage'
+alias chrome='/opt/google/chrome/google-chrome' # Proprietary
+alias printers='system-config-printer'
 
 extract () {
    if [ -f $1 ] ; then
