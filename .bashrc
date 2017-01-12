@@ -15,6 +15,7 @@ alias feh='feh -FZ'
 alias etcher='sudo /home/user/builds/Etcher-linux-x64.AppImage'
 alias chrome='/opt/google/chrome/google-chrome' # Proprietary
 alias printers='system-config-printer'
+alias editawesomewp='sudo nano /usr/share/awesome/themes/default/theme.lua'
 
 extract () {
    if [ -f $1 ] ; then
