@@ -12,10 +12,11 @@ alias editcron='sudo crontab -e'
 
 # Custom program preferences
 alias feh='feh -FZ'
-alias etcher='sudo /home/user/builds/Etcher-linux-x64.AppImage'
+alias etcher='sudo /home/user/builds/Etcher-linux-x64.AppImage &'
 alias chrome='/opt/google/chrome/google-chrome' # Proprietary
 alias printers='system-config-printer'
 alias editawesomewp='sudo nano /usr/share/awesome/themes/default/theme.lua'
+alias updateubuntu='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y && sudo apt-get autoclean'
 
 extract () {
    if [ -f $1 ] ; then
