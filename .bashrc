@@ -9,6 +9,7 @@ alias search='find / 2>/dev/null | grep -i $1'
 alias searchhere='find . 2>/dev/null | grep -i $1'
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 alias editcron='sudo crontab -e'
+alias lsmib='ls -l --block-size=M'
 
 # Custom program preferences
 alias feh='feh -FZ'
