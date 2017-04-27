@@ -382,3 +382,19 @@ end)
 client.add_signal("focus", function(c) c.border_width = "0" c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_width = "0" c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Autostart common programs
+do
+  local cmds =
+  {
+    "leafpad",
+    --"/opt/google/chrome/google-chrome",
+    "pcmanfm",
+    "gnome-terminal.wrapper -e tmux",
+    "xscreensaver -nosplash"
+  }
+
+  for _,i in pairs(cmds) do
+    awful.util.spawn(i)
+  end
+end
