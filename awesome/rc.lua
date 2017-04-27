@@ -390,7 +390,7 @@ do
     "leafpad",
     --"/opt/google/chrome/google-chrome",
     "pcmanfm",
-    "gnome-terminal.wrapper -e tmux new-session -d \; split-window -h \; split-window -d 'top' \; attach",
+    "gnome-terminal.wrapper -e sh tmux.sh",
     "xscreensaver -nosplash"
   }
 
