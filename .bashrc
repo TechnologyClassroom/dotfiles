@@ -20,6 +20,7 @@ alias editawesomewp='sudo nano /usr/share/awesome/themes/default/theme.lua'
 alias updateubuntu='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y && sudo apt-get autoclean'
 alias wait300='echo Wait 5 minutes && uptime && sleep 300 && uptime'
 alias wait150='echo Wait 2.5 minutes && uptime && sleep 150 && uptime'
+alias sc5='echo "Taking screenshot in 5 seconds..." && scrot -cd 5 && echo Screenshot saved in pwd'
 
 extract () {
    if [ -f $1 ] ; then
