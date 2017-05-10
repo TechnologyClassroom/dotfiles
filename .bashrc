@@ -18,6 +18,8 @@ alias chrome='/opt/google/chrome/google-chrome' # Proprietary
 alias printers='system-config-printer'
 alias editawesomewp='sudo nano /usr/share/awesome/themes/default/theme.lua'
 alias updateubuntu='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y && sudo apt-get autoclean'
+alias wait300='echo Wait 5 minutes && uptime && sleep 300 && uptime'
+alias wait150='echo Wait 2.5 minutes && uptime && sleep 150 && uptime'
 
 extract () {
    if [ -f $1 ] ; then
