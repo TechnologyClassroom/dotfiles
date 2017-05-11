@@ -2,8 +2,9 @@
 --Awesome config to remove window border.  This is useful to make any program under GNU/Linux fullscreen.
 --This config may be located in /etc/xdg/awesome/rc.lua
 --The only differences from the default are:
---    layouts order is different
---    c.border_width = "0" is added to the two lines that start with "client.add_signal(" near the end
+--    layouts order is different.
+--    c.border_width = "0" is added to the two lines that start with "client.add_signal(" near the end.
+--    Common programs are started upon login.
 
 -- Standard awesome library
 require("awful")
