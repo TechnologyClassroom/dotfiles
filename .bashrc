@@ -22,8 +22,12 @@ alias wait300='echo Wait 5 minutes && uptime && sleep 300 && uptime'
 alias wait150='echo Wait 2.5 minutes && uptime && sleep 150 && uptime'
 alias sc5='echo "Taking screenshot in 5 seconds..." && scrot -cd 5 && echo Screenshot saved in pwd'
 
+searchcontacts () {
+    grep -a2 -i $1 ~/contacts.vcf
+}
+
 extract () {
-   if [ -f $1 ] ; then
+    if [ -f $1 ] ; then
        case $1 in
            *.tar.bz2)   tar xvjf $1 && cd $(echo $1 | sed 's/.tar.bz2//')    ;;
            *.tar.gz)    tar xvzf $1 && cd $(echo $1 | sed 's/.tar.gz//')    ;;
@@ -37,11 +41,11 @@ extract () {
            *.Z)         uncompress $1 && cd $(echo $1 | sed 's/.Z//')    ;;
            *.7z)        7z x $1 && cd $(echo $1 | sed 's/.7z//')    ;;
            *)           echo "don't know how to extract '$1'..." ;;
-       esac
-   else
-       echo "'$1' is not a valid file!"
-   fi
- }
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}
 
 # This can easily become too much.  Especially if you use tmux or screen.  Pick one or two.
 
