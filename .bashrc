@@ -2,32 +2,32 @@
 # Michael McMahon
 # This goes in your ~/.bashrc file.  After making a change, run ¨exec bash¨ to test results.
 
-# dirtree is based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
-# extract is based on graysky from https://bbs.archlinux.org/viewtopic.php?id=110601
-
-alias search='find / 2>/dev/null | grep -i $1'
-alias searchhere='find . 2>/dev/null | grep -i $1'
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
+# dirtree is based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
+alias editawesomewm='sudo nano /usr/share/awesome/themes/default/theme.lua'
 alias editcron='sudo crontab -e'
 alias lsmib='ls -l --block-size=M'
+alias mapscii-demo='telnet mapscii.me'
+alias sc5='echo "Taking screenshot in 5 seconds..." && scrot -cd 5 && echo Screenshot saved in $(pwd)'
+alias search='find / 2>/dev/null | grep -i $1'
+alias searchhere='find . 2>/dev/null | grep -i $1'
+alias sshpxe='ssh root@192.168.1.58'
+alias unixtime='echo $(($(date +%s)/60/60/24/365)) years $(($(date +%s)/60/60/24- ($(date +%s)/60/60/24/365)*365 )) days $(($(date +%s)/60/60- ($(date +%s)/60/60/24)*24 )) hours $(($(date +%s)/60- ($(date +%s)/60/60)*60 )) minutes $(($(date +%s)- ($(date +%s)/60)*60 )) seconds since the UNIX epoch'
+alias updatedebian='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
+alias wait150='echo Wait 2.5 minutes && uptime && sleep 150 && uptime'
+alias wait300='echo Wait 5 minutes && uptime && sleep 300 && uptime'
 
 # Custom program preferences
-alias feh='feh -FZ'
-alias etcher='sudo /home/user/builds/Etcher-linux-x64.AppImage &'
 alias chrome='/opt/google/chrome/google-chrome' # Proprietary
+alias etcher='sudo /home/user/builds/Etcher-linux-x64.AppImage &'
+alias feh='feh -FZ'
 alias printers='system-config-printer'
-alias editcron='sudo crontab -e'
-alias editawesomewp='sudo nano /usr/share/awesome/themes/default/theme.lua'
-alias lsmb='ls -l --block-size=M'
-alias updateubuntu='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
-alias wait300='echo Wait 5 minutes && uptime && sleep 300 && uptime'
-alias wait150='echo Wait 2.5 minutes && uptime && sleep 150 && uptime'
-alias sc5='echo "Taking screenshot in 5 seconds..." && scrot -cd 5 && echo Screenshot saved in pwd'
 
 searchcontacts () {
     grep -a2 -i $1 ~/contacts.vcf
 }
 
+# extract is based on graysky from https://bbs.archlinux.org/viewtopic.php?id=110601
 extract () {
     if [ -f $1 ] ; then
        case $1 in
@@ -60,6 +60,9 @@ extract () {
 #echo \ 
 # Random three items from BSD calendar
 #calendar | shuf -n 3
+#echo \ 
+# Time since the UNIX epoch
+#echo $(($(date +%s)/60/60/24/365)) years $(($(date +%s)/60/60/24- ($(date +%s)/60/60/24/365)*365 )) days $(($(date +%s)/60/60- ($(date +%s)/60/60/24)*24 )) hours $(($(date +%s)/60- ($(date +%s)/60/60)*60 )) minutes $(($(date +%s)- ($(date +%s)/60)*60 )) seconds since the UNIX epoch
 #echo \ 
 # Refresh command information
 #echo Did you know? ; whatis $(ls /bin | shuf -n 1)
