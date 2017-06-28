@@ -2,6 +2,7 @@
 # Michael McMahon
 # This goes in your ~/.bashrc file.  After making a change, run ¨exec bash¨ to test results.
 
+alias burn='sudo wodim -v -eject -tao dev=/dev/sr1 speed=2 -data $1'
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 # dirtree is based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
 alias editawesomewm='sudo nano /usr/share/awesome/themes/default/theme.lua'
