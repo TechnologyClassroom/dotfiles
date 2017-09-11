@@ -3,13 +3,22 @@
 # This goes in your ~/.bashrc file.  After making a change, run ¨exec bash¨ to test results.
 
 alias burn='sudo wodim -v -eject -tao dev=/dev/sr1 speed=2 -data $1'
+alias corp='curl -s http://cbsg.sourceforge.net/cgi-bin/live | grep -Eo "^<li>.*</li>" | sed s,\</\\?li\>,,g | shuf -n 1'
+# corp is from Genunix from http://www.bashoneliners.com
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 # dirtree is based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
 alias editawesomewm='sudo nano ~/.config/awesome/rc.lua'
 alias editcron='sudo crontab -e'
 alias hitme='echo -e $(cat jokes.txt | shuf -n 1)'
 alias lsmib='ls -l --block-size=M'
+alias LS='echo " _     ____  
+| |   / ___| 
+| |   \___ \ 
+| |___ ___) |
+|_____|____/ 
+"'
 alias mapscii-demo='telnet mapscii.me'
+alias nanobot='sudo nano -\$cwS'
 alias rdp='remmina &'
 alias sc5='echo "Taking screenshot in 5 seconds..." && scrot -cd 5 && echo Screenshot saved in $(pwd)'
 alias search='find / 2>/dev/null | grep -i $1'
