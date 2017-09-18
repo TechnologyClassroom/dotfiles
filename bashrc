@@ -18,6 +18,7 @@ alias LS='echo " _     ____
 |_____|____/ 
 "'
 alias mapscii-demo='telnet mapscii.me'
+alias maths='bc -l'
 alias nanobot='sudo nano -\$cwS'
 alias rdp='remmina &'
 alias sc5='echo "Taking screenshot in 5 seconds..." && scrot -cd 5 && echo Screenshot saved in $(pwd)'
