@@ -94,7 +94,7 @@ end
 -- {{{ Tags
 tags = {
   names   = { "一", "二", "三", "四", "五", "六", "七", "八", "九", "十" },
-  layouts = { layouts[1], layouts[1], layouts[1], layouts[1], layouts[1],
+  layouts = { layouts[1], layouts[2], layouts[2], layouts[1], layouts[1],
               layouts[1], layouts[1], layouts[1], layouts[1], layouts[1] } }
 --https://github.com/diracdeltas/dotfiles/blob/master/awesome/rc.lua
 
@@ -480,7 +480,8 @@ do
     "gnome-terminal.wrapper -e sh tmux2.sh",
     "thunderbird",
     "xscreensaver -nosplash",
-    "gnome-terminal.wrapper -e sh tmux1.sh"
+    "gnome-terminal.wrapper -e sh tmux1.sh",
+    "/usr/bin/VirtualBox"
   }
 
   for _,i in pairs(cmds) do
