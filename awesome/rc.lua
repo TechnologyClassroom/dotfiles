@@ -474,7 +474,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 do
   local cmds =
   {
-    "leafpad",
+    --"leafpad",
     "/opt/google/chrome/google-chrome",
     "pcmanfm",
     "gnome-terminal.wrapper -e sh tmux2.sh",
