@@ -40,6 +40,11 @@ searchcontacts () {
     grep -a2 -i $1 ~/contacts.vcf
 }
 
+# Based on Jeff Sheffield from https://stackoverflow.com/questions/18787375/how-do-i-extract-the-contents-of-an-rpm
+extractrpm () {
+    rpm2cpio $1 | cpio -idmv
+}
+
 # extract is based on graysky from https://bbs.archlinux.org/viewtopic.php?id=110601
 extract () {
     if [ -f $1 ] ; then
@@ -49,6 +54,8 @@ extract () {
            *.bz2)       bunzip2 $1 && cd $(echo $1 | sed 's/.bz2//')    ;;
            *.rar)       unrar x $1 && cd $(echo $1 | sed 's/.rar//')    ;;
            *.gz)        gunzip $1 && cd $(echo $1 | sed 's/.gz//')    ;;
+           # Based on Jeff Sheffield from https://stackoverflow.com/questions/18787375/how-do-i-extract-the-contents-of-an-rpm
+           *.rpm)       rpm2cpio $1 | cpio -idmv    ;;
            *.tar)       tar xvf $1 && cd $(echo $1 | sed 's/.tar//')    ;;
            *.tbz2)      tar xvjf $1 && cd $(echo $1 | sed 's/.tbz2//')    ;;
            *.tgz)       tar xvzf $1 && cd $(echo $1 | sed 's/.tgz//')    ;;
