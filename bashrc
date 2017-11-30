@@ -30,6 +30,7 @@ alias unixtime='echo $(($(date +%s)/60/60/24/365)) years $(($(date +%s)/60/60/24
 alias updatedebian='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
 alias wait150='echo Wait 2.5 minutes && uptime && sleep 150 && uptime'
 alias wait300='echo Wait 5 minutes && uptime && sleep 300 && uptime'
+alias xkcdpass='xkcdpass -n 3 -d ""'
 
 # Custom program preferences
 alias chrome='/opt/google/chrome/google-chrome' # Proprietary
