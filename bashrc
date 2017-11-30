@@ -91,7 +91,7 @@ extract () {
 #/usr/games/pom
 #echo \ 
 # Daily fortune or anecdote
-#/usr/games/fortune 
+#/usr/games/fortune -s
 #echo \
 # Tell a random joke from jokes.txt
 echo -e $(cat jokes.txt | shuf -n 1)
