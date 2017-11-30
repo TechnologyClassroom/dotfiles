@@ -25,6 +25,7 @@ alias sc5='echo "Taking screenshot in 5 seconds..." && scrot -cd 5 && echo Scree
 alias search='find / 2>/dev/null | grep -i $1'
 alias searchhere='find . 2>/dev/null | grep -i $1'
 alias sshpxe='ssh root@192.168.1.58'
+alias telemarketer='rig | sed "s/xxx-xxxx/$(echo $RANDOM | cut -c 1-3)-$(echo $RANDOM | cut -c 1-4)/"'
 alias unixtime='echo $(($(date +%s)/60/60/24/365)) years $(($(date +%s)/60/60/24- ($(date +%s)/60/60/24/365)*365 )) days $(($(date +%s)/60/60- ($(date +%s)/60/60/24)*24 )) hours $(($(date +%s)/60- ($(date +%s)/60/60)*60 )) minutes $(($(date +%s)- ($(date +%s)/60)*60 )) seconds since the UNIX epoch'
 alias updatedebian='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
 alias wait150='echo Wait 2.5 minutes && uptime && sleep 150 && uptime'
