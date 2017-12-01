@@ -37,6 +37,10 @@ alias chrome='/opt/google/chrome/google-chrome' # Proprietary
 alias etcher='sudo /home/user/builds/Etcher-linux-x64.AppImage &'
 alias feh='feh -FZ'
 alias printers='system-config-printer'
+# Based on Egil from https://askubuntu.com/questions/42482/how-to-safely-shutdown-guest-os-in-virtualbox-using-command-line
+virtualboxshutdown () {
+   VBoxManage controlvm $1 acpipowerbutton
+}
 
 searchcontacts () {
     grep -a2 -i $1 ~/contacts.vcf
