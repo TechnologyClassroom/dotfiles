@@ -14,7 +14,7 @@
           default python user agent. Leave empty not to use a fallback.
         -->
 
-        <base_dir>/media/sdb1/data/audio/podcasts</base_dir>
+        <base_dir>/mnt/data0/data/audio/podcasts</base_dir>
         <id3encoding>utf8</id3encoding>
         <id3removev1>yes</id3removev1>
         <useragent></useragent>
@@ -40,12 +40,22 @@
 
         <subscription>
             <title>adventurezone</title>
-            <url>http://feeds.feedburner.com/43FPodcast</url>
+            <url>http://adventurezone.libsyn.com/rss</url>
         </subscription>
 
         <subscription>
-            <title>adventurezone</title>
-            <url>http://adventurezone.libsyn.com/rss</url>
+            <title>blockchaininnovation</title>
+            <url>http://blockchain.libsyn.com/rss</url>
+        </subscription>
+
+        <subscription>
+            <title>cartalk</title>
+            <url>https://www.npr.org/templates/rss/podcast.php?id=510208</url>
+        </subscription>
+
+        <subscription>
+            <title>crypto101</title>
+            <url>http://feeds.soundcloud.com/users/soundcloud:users:321065874/sounds.rss</url>
         </subscription>
 
         <subscription>
@@ -59,18 +69,13 @@
         </subscription>
 
         <subscription>
-            <title>feathercast-apache</title>
-            <url>http://feathercast.apache.org/feed/podcast/</url>
+            <title>freecodecamp</title>
+            <url>http://freecodecamp.libsyn.com/rss</url>
         </subscription>
 
         <subscription>
             <title>gnuworldorder-ogg</title>
             <url>http://gnuworldorder.info/ogg.xml</url>
-        </subscription>
-
-        <subscription>
-            <title>gnuworldorder-spx</title>
-            <url>http://gnuworldorder.info/spx.xml</url>
         </subscription>
 
         <subscription>
@@ -89,8 +94,13 @@
         </subscription>
 
         <subscription>
-            <title>kernelpanic</title>
-            <url>http://kernelpanicoggcast.net/rss.php</url>
+            <title>latenightlinux</title>
+            <url>https://latenightlinux.com/feed/ogg</url>
+        </subscription>
+
+        <subscription>
+            <title>learningmachines101</title>
+            <url>http://learningmachines101.libsyn.com/rss</url>
         </subscription>
 
         <subscription>
@@ -104,6 +114,16 @@
         </subscription>
 
         <subscription>
+            <title>linuxvoice</title>
+            <url>http://www.linuxvoice.com/podcast_mp3.rss</url>
+        </subscription>
+
+        <subscription>
+            <title>machinelearningguide</title>
+            <url>http://machinelearningguide.libsyn.com/rss</url>
+        </subscription>
+
+        <subscription>
             <title>puppet</title>
             <url>https://puppet.com/podcast_feed</url>
         </subscription>
@@ -114,8 +134,33 @@
         </subscription>
 
         <subscription>
-            <title>thecommandline</title>
-            <url>https://thecommandline.net/cmdln_free</url>
+            <title>talkpythontome</title>
+            <url>https://talkpython.fm/episodes/rss</url>
+        </subscription>
+
+        <subscription>
+            <title>theaipodcast</title>
+            <url>http://feeds.soundcloud.com/users/soundcloud:users:264034133/sounds.rss</url>
+        </subscription>
+
+        <subscription>
+            <title>thedaily</title>
+            <url>https://rss.art19.com/the-daily</url>
+        </subscription>
+
+        <subscription>
+            <title>themoth</title>
+            <url>http://feeds.themoth.org/themothpodcast?format=xml</url>
+        </subscription>
+
+        <subscription>
+            <title>thisamericanlife</title>
+            <url>http://feed.thisamericanlife.org/talpodcast</url>
+        </subscription>
+
+        <subscription>
+            <title>ubuntu</title>
+            <url>http://feed.ubuntupodcast.org/ogg/</url>
         </subscription>
 
         <subscription>
