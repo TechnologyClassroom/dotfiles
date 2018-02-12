@@ -12,6 +12,7 @@ alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-
 # dirtree is based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
 alias editawesomewm='sudo nano ~/.config/awesome/rc.lua'
 alias editcron='sudo crontab -e'
+alias gittip='git clone --depth 1'
 alias hitme='echo -e $(cat jokes.txt | shuf -n 1)'
 alias lsmib='ls -l --block-size=M'
 alias LS='echo " _     ____  
