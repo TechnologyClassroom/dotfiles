@@ -3,24 +3,19 @@
 # This goes in your ~/.bashrc file.  After making a change, run ¨exec bash¨ to test results.
 
 alias burn='sudo wodim -v -eject -tao dev=/dev/sr1 speed=2 -data $1'
-alias corp='curl -s http://cbsg.sourceforge.net/cgi-bin/live | grep -Eo "^<li>.*</li>" | sed s,\</\\?li\>,,g | shuf -n 1'
-# corp is from Genunix from http://www.bashoneliners.com
-alias cdbuilds='cd /home/user/builds'
-alias cdftp='cd /var/ftp/pub/'
-alias cdtftp='cd /var/lib/tftpboot/'
+alias cdbuilds='cd ~/builds'
+alias cdftp='cd /var/ftp/pub'
+alias cdtftp='cd /var/lib/tftpboot/pxelinux.cfg'
+alias cdtmp='cd /tmp'
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 # dirtree is based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
-alias editawesomewm='sudo nano ~/.config/awesome/rc.lua'
+alias editawesomewm='sudo vim ~/.config/awesome/rc.lua'
 alias editcron='sudo crontab -e'
-alias gittip='git clone --depth 1'
-alias hitme='echo -e $(cat jokes.txt | shuf -n 1)'
+alias findclass='xprop'
+alias gittop='git clone --depth 1'
+alias lsh='ls -lah'
+alias lashr='ls -lahR'
 alias lsmib='ls -l --block-size=M'
-alias LS='echo " _     ____  
-| |   / ___| 
-| |   \___ \ 
-| |___ ___) |
-|_____|____/ 
-"'
 alias mapscii-demo='telnet mapscii.me'
 alias maths='bc -l'
 alias nanobot='sudo nano -\$cwS'
@@ -46,6 +41,29 @@ alias chrome='/opt/google/chrome/google-chrome' # Proprietary
 alias etcher='sudo /home/user/builds/Etcher-linux-x64.AppImage &'
 alias feh='feh -FZ'
 alias printers='system-config-printer'
+
+# Jokes
+alias corp='curl -s http://cbsg.sourceforge.net/cgi-bin/live | grep -Eo "^<li>.*</li>" | sed s,\</\\?li\>,,g | shuf -n 1'
+# corp is from Genunix from http://www.bashoneliners.com
+alias hitme='echo -e $(cat jokes.txt | shuf -n 1)'
+alias LS='echo " _     ____  
+| |   / ___| 
+| |   \___ \ 
+| |___ ___) |
+|_____|____/ 
+"'
+alias sl='sl -le'
+alias SL='sl -e'
+alias thesetup=clear && echo "Guess what?"
+alias vat='echo Chicken butt'
+alias Vat='echo Chicken butt'
+alias vat?='echo Chicken butt'
+alias Vat?='echo Chicken butt'
+alias what?='echo Chicken butt'
+alias What?='echo Chicken butt'
+alias what='echo Chicken butt'
+alias What='echo Chicken butt'
+
 
 # Based on Egil from https://askubuntu.com/questions/42482/how-to-safely-shutdown-guest-os-in-virtualbox-using-command-line
 virtualboxshutdown () {
