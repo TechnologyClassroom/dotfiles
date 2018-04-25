@@ -25,7 +25,6 @@ alias search='find / 2>/dev/null | grep -i $1'
 alias searchhere='find . 2>/dev/null | grep -i $1'
 alias sshpxe='ssh root@192.168.1.58'
 alias sshvm='ssh -p 2222 root@127.0.0.1'
-alias telemarketer='rig | sed "s/xxx-xxxx/$(echo $RANDOM | cut -c 1-3)-$(echo $RANDOM | cut -c 1-4)/"'
 alias unixtime='echo $(($(date +%s)/60/60/24/365)) years $(($(date +%s)/60/60/24- ($(date +%s)/60/60/24/365)*365 )) days $(($(date +%s)/60/60- ($(date +%s)/60/60/24)*24 )) hours $(($(date +%s)/60- ($(date +%s)/60/60)*60 )) minutes $(($(date +%s)- ($(date +%s)/60)*60 )) seconds since the UNIX epoch'
 alias updatearch='pacman -Syu'
 alias updatedebian='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
@@ -34,13 +33,14 @@ alias updateopensuse='zypper refresh && zypper update'
 alias updateredhat='yum update -y'
 alias wait150='echo Wait 2.5 minutes && uptime && sleep 150 && uptime'
 alias wait300='echo Wait 5 minutes && uptime && sleep 300 && uptime'
-alias xkcdpass='xkcdpass -n 3 -d ""'
 
 # Custom program preferences
 alias chrome='/opt/google/chrome/google-chrome' # Proprietary
 alias etcher='sudo /home/user/builds/Etcher-linux-x64.AppImage &'
 alias feh='feh -FZ'
 alias printers='system-config-printer'
+alias telemarketer='rig | sed "s/xxx-xxxx/$(echo $RANDOM | cut -c 1-3)-$(echo $RANDOM | cut -c 1-4)/"'
+alias xkcdpass='xkcdpass -n 3 -d ""'
 
 # Jokes
 alias corp='curl -s http://cbsg.sourceforge.net/cgi-bin/live | grep -Eo "^<li>.*</li>" | sed s,\</\\?li\>,,g | shuf -n 1'
@@ -63,21 +63,6 @@ alias what?='echo Chicken butt'
 alias What?='echo Chicken butt'
 alias what='echo Chicken butt'
 alias What='echo Chicken butt'
-
-
-# Based on Egil from https://askubuntu.com/questions/42482/how-to-safely-shutdown-guest-os-in-virtualbox-using-command-line
-virtualboxshutdown () {
-  VBoxManage controlvm $1 acpipowerbutton
-}
-
-searchcontacts () {
-  grep -a2 -i $1 ~/contacts.vcf
-}
-
-# Based on Jeff Sheffield from https://stackoverflow.com/questions/18787375/how-do-i-extract-the-contents-of-an-rpm
-extractrpm () {
-  rpm2cpio $1 | cpio -idmv
-}
 
 # extract is based on graysky from https://bbs.archlinux.org/viewtopic.php?id=110601
 extract () {
@@ -103,8 +88,22 @@ extract () {
   fi
 }
 
-# This can easily become too much.  Especially if you use tmux or screen.  Pick one or two.
+# Based on Jeff Sheffield from https://stackoverflow.com/questions/18787375/how-do-i-extract-the-contents-of-an-rpm
+extractrpm () {
+  rpm2cpio $1 | cpio -idmv
+}
 
+searchcontacts () {
+  grep -a2 -i $1 ~/contacts.vcf
+}
+
+# Based on Egil from https://askubuntu.com/questions/42482/how-to-safely-shutdown-guest-os-in-virtualbox-using-command-line
+virtualboxshutdown () {
+  VBoxManage controlvm $1 acpipowerbutton
+}
+
+# These can easily become too much.  Especially if you use tmux or screen.  Pick
+# zero, one or two.
 # Ascii Art message
 #toilet -f$(ls -1 /usr/share/figlet | grep flf | shuf -n 1) Boot Message
 #toilet -fslant Boot Message
