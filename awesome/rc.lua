@@ -94,7 +94,7 @@ end
 -- {{{ Tags
 tags = {
   names   = { "一", "二", "三", "四", "五", "六", "七", "八", "九", "十" },
-  layouts = { layouts[1], layouts[2], layouts[2], layouts[1], layouts[1],
+  layouts = { layouts[1], layouts[1], layouts[1], layouts[1], layouts[1],
               layouts[1], layouts[1], layouts[1], layouts[1], layouts[1] } }
 --https://github.com/diracdeltas/dotfiles/blob/master/awesome/rc.lua
 
@@ -384,8 +384,10 @@ awful.rules.rules = {
     { rule = { class = "gimp" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { tag = tags[1][2] } },
+    { rule = { class = "Firefox" },
+      properties = { tag = tags[1][2] } },
+    { rule = { class = "keepassxc" },
+      properties = { tag = tags[1][2] } },
     { rule = { class = "Thunderbird" },
       properties = { tag = tags[1][3] } },
     { rule = { class = "Google-chrome" },
@@ -476,6 +478,7 @@ do
   {
     --"leafpad",
     "/opt/google/chrome/google-chrome",
+    "keepassxc",
     "pcmanfm",
     "gnome-terminal.wrapper -e sh tmux2.sh",
     "thunderbird",
