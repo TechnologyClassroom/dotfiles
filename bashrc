@@ -129,3 +129,10 @@ virtualboxshutdown () {
 # Tell a random joke from jokes.txt
 echo -e $(cat jokes.txt | shuf -n 1)
 echo \ 
+
+# added by Miniconda2 installer
+export PATH="/home/user/miniconda2/bin:$PATH"
+
+# golang path
+export GOPATH=$HOME/builds/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
