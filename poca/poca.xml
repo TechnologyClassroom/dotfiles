@@ -38,14 +38,44 @@
           * after_date: Only use entries published after date specified.
         -->
 
+        <!-- Errors with poca <subscription>
+            <title>adventurezone</title>
+            <url>http://feeds.feedburner.com/43FPodcast</url>
+        </subscription> -->
+
         <subscription>
             <title>adventurezone</title>
             <url>http://adventurezone.libsyn.com/rss</url>
         </subscription>
 
         <subscription>
+            <title>astonishinglegends</title>
+            <url>https://audioboom.com/channels/4322549.rss</url>
+        </subscription>
+
+        <subscription>
+            <title>awayfromthekeyboard</title>
+            <url>http://awayfromthekeyboard.com/podcastfeed</url>
+        </subscription>
+
+        <subscription>
+            <title>binarytimes</title>
+            <url>http://feeds.feedburner.com/thebinarytimes/LLjt</url>
+        </subscription>
+
+        <!-- Errors with poca <subscription>
+            <title>blacksintechnology</title>
+            <url>http://www.spreaker.com/user/6698969/episodes/feed</url>
+        </subscription> -->
+
+        <subscription>
             <title>blockchaininnovation</title>
             <url>http://blockchain.libsyn.com/rss</url>
+        </subscription>
+
+        <subscription>
+            <title>bsdnow</title>
+            <url>http://feeds.feedburner.com/BsdNowMp3</url>
         </subscription>
 
         <subscription>
@@ -63,9 +93,34 @@
             <url>http://dhenage.libsyn.com/rss</url>
         </subscription>
 
+        <!-- Forbidden <subscription>
+            <title>ctrlclickcast</title>
+            <url>https://ctrlclickcast.com/feed</url>
+        </subscription> -->
+
         <subscription>
             <title>devrandom</title>
             <url>http://devrandomshow.org/shows/?f=rss.xml</url>
+        </subscription>
+
+        <!-- Errors with poca  <subscription>
+            <title>dicetower</title>
+            <url>http://dicetower.coolstuffinc.com/rss</url>
+        </subscription> -->
+
+        <subscription>
+            <title>dukesofdice</title>
+            <url>http://dukesofdice.libsyn.com/rss</url>
+        </subscription>
+
+       <!-- Errors with poca  <subscription>
+            <title>feathercast-apache</title>
+            <url>http://feathercast.apache.org/feed/podcast/</url>
+        </subscription> -->
+
+        <subscription>
+            <title>flossforscience</title>
+            <url>https://flossforscience.github.io/feed.xml</url>
         </subscription>
 
         <subscription>
@@ -74,13 +129,43 @@
         </subscription>
 
         <subscription>
+            <title>frompythonimportpodcast</title>
+            <url>http://feeds.feedburner.com/FromPythonImportPodcastmp3</url>
+        </subscription>
+
+        <!-- Forbidden <subscription>
+            <title>fullstackradio</title>
+            <url>https://rss.simplecast.com/podcasts/279/rss</url>
+        </subscription> -->
+
+        <subscription>
             <title>gnuworldorder-ogg</title>
             <url>http://gnuworldorder.info/ogg.xml</url>
         </subscription>
 
-        <subscription>
+        <!-- Errors with poca <subscription>
+            <title>gnuworldorder-spx</title>
+            <url>http://gnuworldorder.info/spx.xml</url>
+        </subscription> -->
+
+        <!-- Debug invalid stored block lengths error <subscription>
             <title>goinglinux</title>
             <url>http://goinglinux.com/oggpodcast.xml</url>
+        </subscription> -->
+
+        <!-- Takes longer than usual with poca <subscription>
+            <title>guardian</title>
+            <url>https://www.theguardian.com/technology/series/chips-with-everything/podcast.xml</url>
+        </subscription> -->
+
+        <!-- Forbidden <subscription>
+            <title>hanselminutes</title>
+            <url>https://rss.simplecast.com/podcasts/4669/rss</url>
+        </subscription> -->
+
+        <subscription>
+            <title>helloworldpodcast</title>
+            <url>http://hwpod.libsyn.com/rss</url>
         </subscription>
 
         <subscription>
@@ -94,6 +179,21 @@
         </subscription>
 
         <subscription>
+            <title>importthis</title>
+            <url>http://feeds.soundcloud.com/users/soundcloud:users:82237854/sounds.rss</url>
+        </subscription>
+
+        <!-- Errors with poca <subscription>
+            <title>kaktuskast</title>
+            <url>https://www.djkakt.us/kaktuskast/?format=rss</url>
+        </subscription> -->
+
+        <!-- Errors with poca <subscription>
+            <title>kernelpanic</title>
+            <url>http://kernelpanicoggcast.net/rss.php</url>
+        </subscription> -->
+
+        <subscription>
             <title>latenightlinux</title>
             <url>https://latenightlinux.com/feed/ogg</url>
         </subscription>
@@ -101,6 +201,16 @@
         <subscription>
             <title>learningmachines101</title>
             <url>http://learningmachines101.libsyn.com/rss</url>
+        </subscription>
+
+        <!-- Forbidden <subscription>
+            <title>learntocodewithme</title>
+            <url>http://learntocodewithme.libsyn.com/rss</url>
+        </subscription> -->
+
+        <subscription>
+            <title>TLLTS</title>
+            <url>http://www.thelinuxlink.net/tllts/tllts_speex.rss</url>
         </subscription>
 
         <subscription>
@@ -119,8 +229,28 @@
         </subscription>
 
         <subscription>
+            <title>lowplayercount</title>
+            <url>http://lowplayercount.libsyn.com/rss</url>
+        </subscription>
+
+        <subscription>
+            <title>ludology</title>
+            <url>https://ludology.libsyn.com/rss</url>
+        </subscription>
+
+        <subscription>
             <title>machinelearningguide</title>
             <url>http://machinelearningguide.libsyn.com/rss</url>
+        </subscription>
+
+        <subscription>
+            <title>podcastinit</title>
+            <url>https://www.podcastinit.com/feed/mp3/</url>
+        </subscription>
+
+        <subscription>
+            <title>programmingthrowdown</title>
+            <url>http://feeds.feedburner.com/ProgrammingThrowdown</url>
         </subscription>
 
         <subscription>
@@ -128,20 +258,100 @@
             <url>https://puppet.com/podcast_feed</url>
         </subscription>
 
+        <!-- ERROR mismatched tag <subscription>
+            <title>pythonbytes</title>
+            <url>https://pythonbytes.fm/episodes</url>
+        </subscription> -->
+
+        <subscription>
+            <title>radiofreepython</title>
+            <url>http://radiofreepython.com/high_quality.rss</url>
+        </subscription>
+
+        <!-- <subscription>
+            <title>radiolab</title>
+            <url>http://feeds.wnyc.org/radiolab</url>
+        </subscription> -->
+
         <subscription>
             <title>runasradio</title>
             <url>http://www.pwop.com/feed.aspx?show=runasradio</url>
         </subscription>
 
         <subscription>
+            <title>scpreeltoreel</title>
+            <url>https://scpdrp.libsyn.com/rss</url>
+        </subscription>
+
+        <subscription>
+            <title>secretcabal</title>
+            <url>http://www.thesecretcabal.com/scpodcast.xml</url>
+        </subscription>
+
+        <!-- <subscription>
+            <title>securitynow</title>
+            <url>http://leoville.tv/podcasts/sn.xml</url>
+        </subscription>
+
+        <subscription>
+            <title>semi-coherent</title>
+            <url>http://www.theregister.co.uk/hardware/semi_coherent/podcast.rss</url>
+        </subscription> -->
+
+        <subscription>
+            <title>simpleprogrammer</title>
+            <url>http://simpleprogrammer.libsyn.com/rss</url>
+        </subscription>
+
+        <!-- <subscription>
+            <title>smlr</title>
+            <url>https://smlr.us/?feed=podcast</url>
+        </subscription>
+
+        <subscription>
+            <title>softwareengineeringradio</title>
+            <url>http://feeds.feedburner.com/se-radio</url>
+        </subscription> -->
+
+        <!-- Tag mismatch <subscription>
+            <title>startherefmwebdev</title>
+            <url>http://starthere.fm/subscribe-webdev</url>
+        </subscription>
+
+        <subscription>
+            <title>startherefmrubyonrails</title>
+            <url>http://starthere.fm/subscribe-rails</url>
+        </subscription> -->
+
+        <subscription>
+            <title>sysadministrivia</title>
+            <url>http://sysadministrivia.com/oggcast</url>
+        </subscription>
+
+        <!-- Errors with poca <subscription>
+            <title>systemau</title>
+            <url>http://systemau.libsyn.com/rss</url>
+        </subscription> -->
+
+        <subscription>
             <title>talkpythontome</title>
             <url>https://talkpython.fm/episodes/rss</url>
         </subscription>
+
+        <!-- 403 Forbidden <subscription>
+            <title>testandcode</title>
+            <url>http://pythontesting.net/feed/podcast/</url>
+        </subscription> -->
 
         <subscription>
             <title>theaipodcast</title>
             <url>http://feeds.soundcloud.com/users/soundcloud:users:264034133/sounds.rss</url>
         </subscription>
+
+        <!-- Errors with poca <subscription>
+            <title>thecommandline</title>
+            <url>https://thecommandline.net/cmdln_free</url>
+        </subscription> -->
 
         <subscription>
             <title>thedaily</title>

@@ -9,6 +9,7 @@ alias cdtftp='cd /var/lib/tftpboot/pxelinux.cfg'
 alias cdtmp='cd /tmp'
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 # dirtree is based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
+alias du1='du -h --max-depth=1'
 alias editawesomewm='sudo vim ~/.config/awesome/rc.lua'
 alias editcron='sudo crontab -e'
 alias findclass='xprop'
@@ -18,8 +19,6 @@ alias lashr='ls -lahR'
 alias lsmib='ls -l --block-size=M'
 alias mapscii-demo='telnet mapscii.me'
 alias maths='bc -l'
-alias nanobot='sudo nano -\$cwS'
-alias rdp='remmina &'
 alias sc5='echo "Taking screenshot in 5 seconds..." && scrot -cd 5 && echo Screenshot saved in $(pwd)'
 alias search='find / 2>/dev/null | grep -i $1'
 alias searchhere='find . 2>/dev/null | grep -i $1'
@@ -38,14 +37,19 @@ alias wait300='echo Wait 5 minutes && uptime && sleep 300 && uptime'
 alias chrome='/opt/google/chrome/google-chrome' # Proprietary
 alias etcher='sudo /home/user/builds/Etcher-linux-x64.AppImage &'
 alias feh='feh -FZ'
+alias htask='task project:mr or project:home list'
+alias nanobot='sudo nano -\$cwS'
 alias printers='system-config-printer'
+alias rdp='remmina &'
 alias telemarketer='rig | sed "s/xxx-xxxx/$(echo $RANDOM | cut -c 1-3)-$(echo $RANDOM | cut -c 1-4)/"'
+# Also try rig.py 
 alias xkcdpass='xkcdpass -n 3 -d ""'
+alias wtask='task project:git or project:scc list'
 
 # Jokes
 alias corp='curl -s http://cbsg.sourceforge.net/cgi-bin/live | grep -Eo "^<li>.*</li>" | sed s,\</\\?li\>,,g | shuf -n 1'
 # corp is from Genunix from http://www.bashoneliners.com
-alias hitme='echo -e $(cat jokes.txt | shuf -n 1)'
+alias hitme='echo -e $(cat ~/jokes.txt | shuf -n 1)'
 alias LS='echo " _     ____  
 | |   / ___| 
 | |   \___ \ 
