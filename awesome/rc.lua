@@ -392,6 +392,8 @@ awful.rules.rules = {
       properties = { tag = tags[1][3] } },
     { rule = { class = "Google-chrome" },
       properties = { tag = tags[1][2] } },
+    { rule = { class = "virt-manager" },
+      properties = { tag = tags[1][4] } },
     { rule = { class = "VirtualBox" },
       properties = { tag = tags[1][4] } },
 }
@@ -476,7 +478,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 do
   local cmds =
   {
-    --"leafpad",
     "/opt/google/chrome/google-chrome",
     "keepassxc",
     "pcmanfm",
@@ -484,6 +485,7 @@ do
     "thunderbird",
     "xscreensaver -nosplash",
     "gnome-terminal.wrapper -e sh tmux1.sh",
+    "/usr/bin/virt-manager",
     "/usr/bin/VirtualBox"
   }
 
