@@ -7,18 +7,21 @@ alias cdbuilds='cd ~/builds'
 alias cdftp='cd /var/ftp/pub'
 alias cdtftp='cd /var/lib/tftpboot/pxelinux.cfg'
 alias cdtmp='cd /tmp'
+# Based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
-# dirtree is based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
 alias du1='du -h --max-depth=1'
 alias editawesomewm='sudo vim ~/.config/awesome/rc.lua'
 alias editcron='sudo crontab -e'
 alias findclass='xprop'
 alias gittop='git clone --depth 1'
-alias lsh='ls -lah'
+# From raspi at https://www.commandlinefu.com/commands/view/3890
+alias largestdebs="dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n"alias lsh='ls -lah'
 alias lashr='ls -lahR'
 alias lsmib='ls -l --block-size=M'
 alias mapscii-demo='telnet mapscii.me'
 alias maths='bc -l'
+# From Byte Commander at https://askubuntu.com/questions/687295
+alias purgeremoved="sudo apt-get purge $(dpkg -l | grep '^rc' | awk '{print $2}')"
 alias sc5='echo "Taking screenshot in 5 seconds..." && scrot -cd 5 && echo Screenshot saved in $(pwd)'
 alias search='find / 2>/dev/null | grep -i $1'
 alias searchhere='find . 2>/dev/null | grep -i $1'
@@ -41,8 +44,6 @@ alias htask='task project:mr or project:home list'
 alias nanobot='sudo nano -\$cwS'
 alias printers='system-config-printer'
 alias rdp='remmina &'
-alias telemarketer='rig | sed "s/xxx-xxxx/$(echo $RANDOM | cut -c 1-3)-$(echo $RANDOM | cut -c 1-4)/"'
-# Also try rig.py 
 alias xkcdpass='xkcdpass -n 3 -d ""'
 alias wtask='task project:git or project:scc list'
 
@@ -58,6 +59,8 @@ alias LS='echo " _     ____
 "'
 alias sl='sl -le'
 alias SL='sl -e'
+alias telemarketer='rig | sed "s/xxx-xxxx/$(echo $RANDOM | cut -c 1-3)-$(echo $RANDOM | cut -c 1-4)/"'
+# Also try rig.py 
 alias thesetup=clear && echo "Guess what?"
 alias vat='echo Chicken butt'
 alias Vat='echo Chicken butt'
@@ -68,7 +71,7 @@ alias What?='echo Chicken butt'
 alias what='echo Chicken butt'
 alias What='echo Chicken butt'
 
-# extract is based on graysky from https://bbs.archlinux.org/viewtopic.php?id=110601
+# Based on graysky from https://bbs.archlinux.org/viewtopic.php?id=110601
 extract () {
   if [ -f $1 ] ; then
     case $1 in
@@ -77,7 +80,7 @@ extract () {
       *.bz2)       bunzip2 $1 && cd $(echo $1 | sed 's/.bz2//')    ;;
       *.rar)       unrar x $1 && cd $(echo $1 | sed 's/.rar//')    ;;
       *.gz)        gunzip $1 && cd $(echo $1 | sed 's/.gz//')    ;;
-      # Based on Jeff Sheffield from https://stackoverflow.com/questions/18787375/how-do-i-extract-the-contents-of-an-rpm
+      # Based on Jeff Sheffield from https://stackoverflow.com/questions/18787375
       *.rpm)       rpm2cpio $1 | cpio -idmv    ;;
       *.tar)       tar xvf $1 && cd $(echo $1 | sed 's/.tar//')    ;;
       *.tbz2)      tar xvjf $1 && cd $(echo $1 | sed 's/.tbz2//')    ;;
@@ -92,7 +95,7 @@ extract () {
   fi
 }
 
-# Based on Jeff Sheffield from https://stackoverflow.com/questions/18787375/how-do-i-extract-the-contents-of-an-rpm
+# Based on Jeff Sheffield from https://stackoverflow.com/questions/18787375
 extractrpm () {
   rpm2cpio $1 | cpio -idmv
 }
@@ -101,7 +104,7 @@ searchcontacts () {
   grep -a2 -i $1 ~/contacts.vcf
 }
 
-# Based on Egil from https://askubuntu.com/questions/42482/how-to-safely-shutdown-guest-os-in-virtualbox-using-command-line
+# Based on Egil from https://askubuntu.com/questions/42482
 virtualboxshutdown () {
   VBoxManage controlvm $1 acpipowerbutton
 }
