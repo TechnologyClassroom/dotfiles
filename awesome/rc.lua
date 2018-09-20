@@ -394,8 +394,10 @@ awful.rules.rules = {
       properties = { tag = tags[1][2] } },
     { rule = { class = "virt-manager" },
       properties = { tag = tags[1][4] } },
-    { rule = { class = "VirtualBox" },
+    { rule = { class = "Virt-manager" },
       properties = { tag = tags[1][4] } },
+    { rule = { class = "VirtualBox" },
+      properties = { tag = tags[1][4] } }
 }
 -- }}}
 
