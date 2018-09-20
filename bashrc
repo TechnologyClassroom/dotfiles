@@ -3,9 +3,11 @@
 # This goes in your ~/.bashrc file.  After making a change, run ¨exec bash¨ to test results.
 
 alias burn='sudo wodim -v -eject -tao dev=/dev/sr1 speed=2 -data $1'
-alias cdbuilds='cd ~/builds'
+alias cdbuilds='cd /home/user/builds'
 alias cdftp='cd /var/ftp/pub'
-alias cdtftp='cd /var/lib/tftpboot/pxelinux.cfg'
+# I have moved my tftp to overlap with my ftp.
+alias cdtftp='cd /var/ftp/pub/pxe/pxelinux.cfg'
+#alias cdtftp='cd /var/lib/tftpboot/pxelinux.cfg'
 alias cdtmp='cd /tmp'
 # Based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
@@ -26,6 +28,7 @@ alias purgeremoved="sudo apt-get purge $(dpkg -l | grep '^rc' | awk '{print $2}'
 alias sc5='echo "Taking screenshot in 5 seconds..." && scrot -cd 5 && echo Screenshot saved in $(pwd)'
 alias search='find / 2>/dev/null | grep -i $1'
 alias searchhere='find . 2>/dev/null | grep -i $1'
+alias sshmon='ssh root@10.12.17.16'
 alias sshpxe='ssh root@192.168.1.58'
 alias sshvm='ssh -p 2222 root@127.0.0.1'
 alias unixtime='echo $(($(date +%s)/60/60/24/365)) years $(($(date +%s)/60/60/24- ($(date +%s)/60/60/24/365)*365 )) days $(($(date +%s)/60/60- ($(date +%s)/60/60/24)*24 )) hours $(($(date +%s)/60- ($(date +%s)/60/60)*60 )) minutes $(($(date +%s)- ($(date +%s)/60)*60 )) seconds since the UNIX epoch'
