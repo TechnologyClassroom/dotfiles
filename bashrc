@@ -46,6 +46,7 @@ alias playsomaspecial='mpv https://somafm.com/specials.pls'
 alias playsomavaporwaves='mpv https://somafm.com/vaporwaves.pls'
 alias playwbur='mpv https://icecast-stream.wbur.org/wbur_www'
 alias playwgbh='mpv https://streams.audio.wgbh.org:8200/wgbh-aac'
+alias playwmbr='mpv https://wmbr.org/WMBR_live_128.m3u'
 # From Byte Commander at https://askubuntu.com/questions/687295
 alias purgeremoved="sudo apt-get purge $(dpkg -l | grep '^rc' | awk '{print $2}')"
 alias rotate="sudo logrotate -f /etc/logrotate.conf"
