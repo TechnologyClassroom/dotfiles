@@ -378,6 +378,11 @@
             <url>http://nightvale.libsyn.com/rss</url>
         </subscription>
 
+        <subscription>
+            <title>wiredgadgetlab</title>
+            <url>https://www.wired.com/feed/podcast/gadget-lab</url>
+        </subscription>
+
     </subscriptions>
 
 </poca>
