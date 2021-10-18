@@ -121,11 +121,13 @@ alias feh='feh -FZ'
 alias googledrive='gdrive download --recursive'  # Add a drive id as $1 (that is the long string at the end of a Google Drive link.  https://github.com/prasmussen/gdrive
 alias nanobot='sudo nano -\$cwS'
 alias neovim='nvim'
+alias pinpass="od -A n -t d -N 3 /dev/urandom | awk '{$1=substr($1,1,6); print $1 }'"
 alias png2jpgall='mogrify -format jpg *.png'
 alias printers='system-config-printer'
 alias rdp='remmina &'
 alias reddit='ttrv'
-alias pinpass="od -A n -t d -N 3 /dev/urandom | awk '{$1=substr($1,1,6); print $1 }'"
+alias scrubmetadata='exiftool -all= -tagsfromfile @ -Orientation'
+alias scrubmetadatarecursive='find . -type f -exec exiftool -all= -tagsfromfile @ -Orientation {} \;'
 alias xkcdpass="shuf -n3 /usr/share/dict/words | tr -d ' \t\n' | sed s/\'s//g && echo \ "
 alias startvpn='sudo openvpn /etc/openvpn/client.conf'
 # Task Warrior
