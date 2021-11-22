@@ -2,6 +2,11 @@
 # Michael McMahon
 # This goes in your ~/.bashrc file.  After making a change, run ¨exec bash¨ to test results.
 
+# Adjust screen brightness.
+#   brightness 0.3  # Set the screen to 30% brightness.
+#   brightness 0.6  # Set the screen to 60% brightness.
+# Based on Jae Beojkkoch at https://unix.stackexchange.com/a/529164
+alias brightness="xrandr --output $(xrandr -q | grep ' connected' | head -n 1 | cut -d ' ' -f1) --brightness"
 alias burn='sudo wodim -v -eject -tao dev=/dev/sr1 speed=2 -data $1'
 alias cdbuilds='cd /home/user/builds'
 alias cdftp='cd /var/ftp/pub'
