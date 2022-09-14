@@ -43,6 +43,9 @@ alias network='mate-network-properties'
 alias notificationblip='printf \\a'  # Works on remote servers.
 # Especially useful notifying when long processes complete.
 alias odtext='unoconv --stdout -f text'
+alias passgen="head -c 20 <(tr -dc [:alnum:] < /dev/urandom) && echo"
+alias passpin="head -c 6 <(tr -dc [:digit:] < /dev/urandom) && echo"
+alias passxkcd="shuf -n3 /usr/share/dict/words | tr -d ' \t\n' | sed s/\'s//g && echo"
 # From Byte Commander at https://askubuntu.com/questions/687295
 alias purgeremoved="sudo apt-get purge $(dpkg -l | grep '^rc' | awk '{print $2}')"
 alias rotate="sudo logrotate -f /etc/logrotate.conf"
@@ -126,7 +129,6 @@ alias feh='feh -FZ'
 alias googledrive='gdrive download --recursive'  # Add a drive id as $1 (that is the long string at the end of a Google Drive link.  https://github.com/prasmussen/gdrive
 alias nanobot='sudo nano -\$cwS'
 alias neovim='nvim'
-alias pinpass="od -A n -t d -N 3 /dev/urandom | awk '{$1=substr($1,1,6); print $1 }'"
 alias png2jpgall='mogrify -format jpg *.png'
 alias printers='system-config-printer'
 alias rdp='remmina &'
