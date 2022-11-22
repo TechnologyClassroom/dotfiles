@@ -1,0 +1,15 @@
+" This neovim config file could go here: ~/.config/nvim/init.vim
+
+" Change color past 80 characters per line
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+" From Simon Howard at https://stackoverflow.com/questions/235439/vim-80-column-
+"   layout-concerns
+
+:highlight TrailingBlankSpace ctermbg=red guibg=#592929
+" Show trailing blank space:
+:match TrailingBlankSpace /\s\+$/
+" Based on https://breezewiki.pussthecat.org/vim/wiki/Highlight_unwanted_spaces
+
+" Disable mouse.
+set mouse=
