@@ -1,12 +1,22 @@
 # dotfiles
-This repo contains config files that I use.  This directory does not have the mass appeal of other directories.
+This repo contains config files that I use.
 
-awesome/rc.lua contains my awesome configuration that I use at work.
-
-awesome/rc.lua.bak contains my awesome configuration that I use during presentations.
-
-.bashrc contains suggestions for a .bashrc file.
+awesome/rc.lua contains my awesome configuration that I used at work.
 
 .poca/poca.xml contains my podcatcher config.
 
-jokes.txt is for .bashrc automatation.  As jokes are often heard and not sourced, I do not know where they came from.  I am sorry.
+bashrc contains suggestions for a .bashrc file.
+
+i3 is my current i3 config.
+
+install.sh installs most of these configs.
+
+jokes.txt moved to the hitme repository.
+
+nanorc is a config for nano.
+
+nvim.rc is a config for neovim
+
+tmux.conf is a config for tmux.
+
+vimrc is a config for vim.
