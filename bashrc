@@ -66,9 +66,10 @@ alias packagesearch="apt-file find -x"
 alias packagesearchupdate="apt-file update"
 alias packagesearcharch="pacman -F"
 alias packagesearchupdatearch="pacman -Fy"
-alias passgen="head -c 20 <(tr -dc [:alnum:] < /dev/urandom) && echo"
-alias passpin="head -c 6 <(tr -dc [:digit:] < /dev/urandom) && echo"
-alias passxkcd="shuf -n3 /usr/share/dict/words | tr -d ' \t\n' | sed s/\'s//g && echo"
+alias passgen='head -c 20 <(tr -dc "[:alnum:]" < /dev/urandom) && echo'
+alias passpin='head -c 6 <(tr -dc "[:digit:]" < /dev/urandom) && echo'
+alias passxkcd='shuf -n3 /usr/share/dict/words | tr -d ' \t\n' | sed s/\'s//g && echo'
+alias passxkcdlong='shuf -n7 /usr/share/dict/words | tr -d ' \t\n' | sed s/\'s//g && echo'
 alias psramsort="ps aux --sort=-%mem | head -n 8"
 # From Byte Commander at https://askubuntu.com/questions/687295
 alias purgeremoved="sudo apt-get purge $(dpkg -l | grep '^rc' | awk '{print $2}')"
