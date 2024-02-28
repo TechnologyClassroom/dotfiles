@@ -50,7 +50,7 @@ alias lsh='ls -lah'
 alias lsmib='ls -l --block-size=M'
 alias mapscii-demo='telnet mapscii.me'
 alias maths='bc -l'
-alias mkteststructure='mkdir -p combo/{0,1,2,3,4,5,6,7,8,9}/{0,1,2,3,4,5,6,7,8,9}/{0,1,2,3,4,5,6,7,8,9}'
+alias mkteststructure='mkdir -p combo/{0..9}/{0..9}/{0..9}'
 alias moon='curl http://wttr.in/Moon'
 alias mountudisk='udisksctl mount -b'
 alias mountudiskunlock='udisksctl unlock -b'
@@ -99,7 +99,8 @@ alias weatherchartboston='curl v2d.wttr.in/Boston'
 
 # Radio stations
 alias play247polkaheaven='mpv http://s7.nexuscast.com/tunein.php/rayzalokar/playlist.pls'  # Polka
-alias playbigcity='mpv http://38.96.148.254:9154/;stream.mp3'  # Boston's pirate Soca / Hip hop / Rap station
+alias playb87fm='mpv https://streamer.radio.co/s883e1674e/listen'  # Boston Soca, Hip Hop, and Rap
+alias playbigcity='mpv https://streamer.radio.co/s883e1674e/listen'
 alias playlofi='mpv --vo=no https://www.youtube.com/watch?v=5qap5aO4i9A'
 alias playmaschinengeist='mpv http://radio.maschinengeist.org/stream_ultra.m3u'  # Drone
 alias playwbur='mpv https://icecast-stream.wbur.org/wbur_www'  # Boston's other NPR station
