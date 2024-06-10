@@ -6,14 +6,19 @@ match OverLength /\%81v.\+/
 " From Simon Howard at https://stackoverflow.com/questions/235439/vim-80-column-
 "   layout-concerns
 
-:highlight TrailingBlankSpace ctermbg=red guibg=#592929
-" Show trailing blank space:
-:match TrailingBlankSpace /\s\+$/
-" Based on https://breezewiki.pussthecat.org/vim/wiki/Highlight_unwanted_spaces
-
-" Remove trailing blank space automatically.
-autocmd FileType md,mdwn autocmd BufWritePre <buffer> %s/\s\+$//e
-" Based on https://breezewiki.pussthecat.org/vim/wiki/Remove_unwanted_spaces
+" Show trailing blank space and remove it on write:
+:highlight ExtraBlankspace ctermbg=red guibg=red
+:match ExtraBlankspace /\s\+$/
+:autocmd BufWinEnter * match ExtraBlankspace /\s\+$/
+:autocmd InsertEnter * match ExtraBlankspace /\s\+\%#\@<!$/
+:autocmd InsertLeave * match ExtraBlankspace /\s\+$/
+:autocmd BufWinLeave * call clearmatches()
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+:autocmd FileType txt,md,mdwn,c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call TrimBlankSpace()
+" Based on Michael Durrant & l0b0 at https://stackoverflow.com/a/13795287
+" and https://breezewiki.pussthecat.org/vim/wiki/Remove_unwanted_spaces
 
 " Disable mouse.
 set mouse=
