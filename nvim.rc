@@ -13,10 +13,11 @@ match OverLength /\%81v.\+/
 :autocmd InsertEnter * match ExtraBlankspace /\s\+\%#\@<!$/
 :autocmd InsertLeave * match ExtraBlankspace /\s\+$/
 :autocmd BufWinLeave * call clearmatches()
-function! TrimWhiteSpace()
+function! TrimTrailingBlankSpace()
     %s/\s\+$//e
 endfunction
-:autocmd FileType txt,md,mdwn,c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call TrimBlankSpace()
+:autocmd FileType txt,md,mdwn,c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call TrimTrailingBlankSpace()
+:nnoremap <silent> <F5> :call TrimTrailingBlankSpace()<CR>
 " Based on Michael Durrant & l0b0 at https://stackoverflow.com/a/13795287
 " and https://breezewiki.pussthecat.org/vim/wiki/Remove_unwanted_spaces
 
