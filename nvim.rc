@@ -11,5 +11,9 @@ match OverLength /\%81v.\+/
 :match TrailingBlankSpace /\s\+$/
 " Based on https://breezewiki.pussthecat.org/vim/wiki/Highlight_unwanted_spaces
 
+" Remove trailing blank space automatically.
+autocmd FileType md,mdwn autocmd BufWritePre <buffer> %s/\s\+$//e
+" Based on https://breezewiki.pussthecat.org/vim/wiki/Remove_unwanted_spaces
+
 " Disable mouse.
 set mouse=
