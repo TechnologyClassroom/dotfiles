@@ -1,6 +1,7 @@
 # Partial configuration of .bashrc
 # Michael McMahon
-# This goes in your ~/.bashrc file.  After making a change, run ¨exec bash¨ to test results.
+# This goes in your ~/.bashrc file.  After making a change, run `exec bash` or
+# `source ~/.bashrc` to test results.
 
 # Do not put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -10,9 +11,10 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
+HISTSIZE=1000000
+HISTFILESIZE=2000000
 
+alias alsaadjust='alsamixer'
 alias amirunningx11orwayland="echo $XDG_SESSION_TYPE"
 # Adjust screen brightness.
 #   brightness 0.3  # Set the screen to 30% brightness.
@@ -26,10 +28,10 @@ alias cdtmp='cd /tmp'
 alias cdtmpd='cd $(mktemp -d)'
 alias checkbattery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias clock='tty-clock -s'
+alias curlresponseheaders='curl -s -D - -o /dev/null'
+alias curlrequestheaders='curl -I -L'
 # Based on Maythux from http://askubuntu.com/questions/431251/how-to-print-the-directory-tree-in-terminal
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
-alias diskspace='ncdu'
-alias diskstat='iostat -ctd 2'
 alias du1='du -h --max-depth=1'
 alias editawesomewm='nvim ~/.config/awesome/rc.lua'
 alias editcron='sudo crontab -e'
@@ -155,9 +157,11 @@ alias clearccache='ccache -C'
 alias cronhourlytest='run-parts -v /etc/cron.hourly'
 alias cronweeklytest='run-parts -v /etc/cron.weekly'
 alias cronmonthlytest='run-parts -v /etc/cron.monthly'
+# https://github.com/papandreou/seespee
 alias csp='seespee'
-alias curlresponseheaders='curl -s -D - -o /dev/null'
-alias curlrequestheaders='curl -I -L'
+alias diskspace='ncdu'
+# sudo apt install -y sysstat
+alias diskstat='iostat -ctd 2'
 alias doctlcfg='vim $HOME/.config/doctl/config.yaml'
 alias doctlls='doctl compute droplet list --format "ID,Name,PublicIPv4"'
 alias doctllsa='doctl compute droplet list'
@@ -169,9 +173,11 @@ alias emacs='emacs -nw'
 alias feh='feh -FZ'
 alias googledrive='gdrive download --recursive'  # Add a drive id as $1 (that is the long string at the end of a Google Drive link.  https://github.com/prasmussen/gdrive
 alias i3edit='nvim ~/.config/i3/config'
+alias logcat='zcat -f'
 alias lynisroot='cd /usr/share/lynis/ && sudo lynis audit system -Q'
 alias lynisrootlog='cd /usr/share/lynis/ && sudo lynis audit system -Q | tee -a lynis"$(date +%Y-%m-%d)".log'
 alias nanobot='sudo nano -\$cwS'
+alias nettop='sudo nethogs'
 alias nmaplocal0='sudo nmap -sn 192.168.0.0/24'
 alias nmaplocal50='sudo nmap -sn 192.168.50.0/24'
 alias nmaplocal1000='sudo nmap -sn 10.0.0.0/24'
@@ -190,14 +196,17 @@ alias qrpnglarge="qrencode -d 400 -s 10 -o qrcode-400-10.png"
 # qrdecode needs an image file argument with a QR code.
 alias qrdecode="qrencode -r"
 alias qrread="qrencode -r"
+alias ripflac="cd ~/Music/flac && abcde -o flac"
 alias rdp='remmina &'
 alias reddit='ttrv'
 alias sc5='echo "Taking screenshot in 5 seconds..." && scrot -cd 5 && echo Screenshot saved in $(pwd)'
+alias scpold='scp -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa'
 alias scrubmetadata='exiftool -all= -tagsfromfile @ -Orientation'
 alias scrubmetadatarecursive='find . -type f -exec exiftool -all= -tagsfromfile @ -Orientation {} \;'
 alias spdm='spd -c ~/.spd/spd-mastodon.conf'
 alias sshold='ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa'
-alias startvpn='sudo openvpn /etc/openvpn/client.conf'alias svg2png1x="inkscape -C $1 -o ${1%.svg}.png"
+alias startvpn='sudo openvpn /etc/openvpn/client.conf'
+alias svg2png1x="inkscape -C $1 -o ${1%.svg}.png"
 alias svg2png1.5x="inkscape -C $1 -d 144 -o ${1%.svg}-1.5x.png"
 alias svg2png2x="inkscape -C $1 -d 192 -o ${1%.svg}-2x.png"
 alias svg2png3x="inkscape -C $1 -d 288 -o ${1%.svg}-3x.png"
@@ -230,23 +239,31 @@ alias yt-dlpworstaudio='yt-dlp -f worstaudio -ciw --output "%(title)s.%(ext)s" -
 # Jokes
 alias corp='curl -s http://cbsg.sourceforge.net/cgi-bin/live | grep -Eo "^<li>.*</li>" | sed s,\</\\?li\>,,g | shuf -n 1'
 # corp is from Genunix from http://www.bashoneliners.com
-alias cowsayshowcase="for i in $(cowsay -l | awk 'NR>1'); do cowsay -f $i $i; done"
+cowsayshowcase() {
+  for i in $(cowsay -l | awk 'NR>1'); do
+    cowsay -f $i $i
+  done
+}
 alias hitme='echo -e $(shuf -n 1 ~/jokes.txt)'
 # See https://github.com/TechnologyClassroom/hitme for jokes.txt
-alias LS='echo " _     ____  
-| |   / ___| 
-| |   \___ \ 
+alias LS='echo " _     ____
+| |   / ___|
+| |   \___ \
 | |___ ___) |
-|_____|____/ 
+|_____|____/
 "'
 alias now='sleep 0'
 alias say="spd-say"
+# Inspired by https://botsin.space/@scream/
+scream () {
+  shuf -er -n"$(( ( RANDOM % 30 ) + 1 ))" A | tr -d '\n' && shuf -er -n"$(( ( RANDOM % 20 ) + 1 ))" H | tr -d '\n' && echo
+}
 alias shrug='echo "¯\_(ツ)_/¯"'
 alias shrugcopy='echo "¯\_(ツ)_/¯" | xclip -selection clipboard'
 #alias sl='sl -le'
 #alias SL='sl -e'
 alias telemarketer='rig | sed "s/xxx-xxxx/$(echo $RANDOM | cut -c 1-3)-$(echo $RANDOM | cut -c 1-4)/"'
-# Also try rig.py 
+# Also try rig.py
 alias thesetup=clear && echo "Guess what?"
 alias vat='echo Chicken butt'
 alias Vat='echo Chicken butt'
