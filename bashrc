@@ -100,14 +100,19 @@ alias weatherchart='curl v2d.wttr.in/'
 alias weatherchartboston='curl v2d.wttr.in/Boston'
 
 # Radio stations
+alias playkkcr='mpv https://s8.phx.icastcenter.com:9000/stream#.mp3?ver=723330' # Kaua'i Community Radio Hawaii
+## Boston
 alias play247polkaheaven='mpv http://s7.nexuscast.com/tunein.php/rayzalokar/playlist.pls'  # Polka
 alias playb87fm='mpv https://streamer.radio.co/s883e1674e/listen'  # Boston Soca, Hip Hop, and Rap
 alias playbigcity='mpv https://streamer.radio.co/s883e1674e/listen'
-alias playlofi='mpv --vo=no https://www.youtube.com/watch?v=5qap5aO4i9A'
-alias playmaschinengeist='mpv http://radio.maschinengeist.org/stream_ultra.m3u'  # Drone
 alias playwbur='mpv https://icecast-stream.wbur.org/wbur_www'  # Boston's other NPR station
 alias playwgbh='mpv https://streams.audio.wgbh.org:8200/wgbh-aac'  # Boston's other NPR station
 alias playwmbr='mpv https://wmbr.org/WMBR_live_128.m3u'  # MIT
+## Internet
+alias playlofi='mpv --vo=no https://www.youtube.com/watch?v=5qap5aO4i9A'
+alias playmaschinengeist='mpv http://radio.maschinengeist.org/stream_ultra.m3u'  # Drone
+alias playshreding='mpv --vo=no https://shred.ing/'
+### soma.fm (All of these might not be up-to-date.)
 alias playsomadronezone-ambient='mpv https://somafm.com/dronezone.pls'
 alias playsomadeepspaceone-ambient='mpv https://somafm.com/deepspaceone.pls'
 alias playsomaspacestationsoma-electronic='mpv https://somafm.com/spacestation.pls'
