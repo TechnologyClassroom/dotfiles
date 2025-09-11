@@ -367,20 +367,20 @@ traceroute () {
 extract () {
   if [ -f "$1" ] ; then
     case $1 in
-      *.tar.bz2)   tar xvjf $1 && cd $(echo "$1" | sed 's/.tar.bz2//') ;;
-      *.tar.gz)    tar xvzf $1 && cd $(echo "$1" | sed 's/.tar.gz//') ;;
-      *.bz2)       bunzip2 $1 && cd $(echo "$1" | sed 's/.bz2//') ;;
-      *.rar)       unrar x $1 && cd $(echo "$1" | sed 's/.rar//') ;;
-      *.gz)        gunzip $1 && cd $(echo "$1" | sed 's/.gz//') ;;
+      *.tar.bz2)   tar xvjf $1 && cd "$(echo "$1" | sed 's/.tar.bz2//')" ;;
+      *.tar.gz)    tar xvzf $1 && cd "$(echo "$1" | sed 's/.tar.gz//')" ;;
+      *.bz2)       bunzip2 $1 && cd "$(echo "$1" | sed 's/.bz2//')" ;;
+      *.rar)       unrar x $1 && cd "$(echo "$1" | sed 's/.rar//')" ;;
+      *.gz)        gunzip $1 && cd "$(echo "$1" | sed 's/.gz//')" ;;
       # Based on Jeff Sheffield from https://stackoverflow.com/questions/18787375
       *.rpm)       rpm2cpio $1 | cpio -idmv ;;
-      *.tar)       tar xvf $1 && cd $(echo "$1" | sed 's/.tar//') ;;
-      *.tbz2)      tar xvjf $1 && cd $(echo "$1" | sed 's/.tbz2//') ;;
-      *.tgz)       tar xvzf $1 && cd $(echo "$1" | sed 's/.tgz//') ;;
-      *.xz)        unxz $1 && cd $(echo "$1" | sed 's/.xz//') ;;
-      *.zip)       unzip $1 && cd $(echo "$1" | sed 's/.zip//') ;;
-      *.Z)         uncompress $1 && cd $(echo "$1" | sed 's/.Z//') ;;
-      *.7z)        7z x $1 && cd $(echo "$1" | sed 's/.7z//') ;;
+      *.tar)       tar xvf $1 && cd "$(echo "$1" | sed 's/.tar//')" ;;
+      *.tbz2)      tar xvjf $1 && cd "$(echo "$1" | sed 's/.tbz2//')" ;;
+      *.tgz)       tar xvzf $1 && cd "$(echo "$1" | sed 's/.tgz//')" ;;
+      *.xz)        unxz $1 && cd "$(echo "$1" | sed 's/.xz//')" ;;
+      *.zip)       unzip $1 && cd "$(echo "$1" | sed 's/.zip//')" ;;
+      *.Z)         uncompress $1 && cd "$(echo "$1" | sed 's/.Z//')" ;;
+      *.7z)        7z x $1 && cd "$(echo "$1" | sed 's/.7z//')" ;;
       *)           echo "extract does not know how to extract '$1'..." ;;
     esac
   else
