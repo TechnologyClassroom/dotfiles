@@ -365,7 +365,7 @@ traceroute () {
 
 # Based on graysky from https://bbs.archlinux.org/viewtopic.php?id=110601
 extract () {
-  if [ -f $1 ] ; then
+  if [ -f "$1" ] ; then
     case $1 in
       *.tar.bz2)   tar xvjf $1 && cd $(echo $1 | sed 's/.tar.bz2//') ;;
       *.tar.gz)    tar xvzf $1 && cd $(echo $1 | sed 's/.tar.gz//')  ;;
