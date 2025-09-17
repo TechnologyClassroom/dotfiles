@@ -504,3 +504,16 @@ rtheaders () {
 # Tell a random joke from jokes.txt
 echo -e $(shuf -n 1 jokes.txt)
 echo
+
+# Run tests and run tmux automatically.
+# From  George Udosen, yosefrow, hzh,  AdminBee, and user7089 at
+# https://unix.stackexchange.com/a/490830
+if command -v tmux &> /dev/null \
+  && [ -n "$PS1" ] \
+  && [[ ! "$TERM" =~ screen ]] \
+  && [[ ! "$TERM" =~ tmux ]] \
+  && [ -z "$TMUX" ]; then
+    tmux a -t default \
+      || exec tmux new -s default \
+      && exit;
+fi
